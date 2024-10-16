@@ -49,6 +49,7 @@ nav ul li a:hover::after{
     max-width: 90vw;
     margin: auto;
     text-align: center;
+    transition: transform 0.5s;
 }
 .shop{
     display: flex;
@@ -100,6 +101,11 @@ nav ul li a:hover::after{
    inset: 160px 0 0 auto;
    display: grid;
    grid-template-rows: 70px 1fr 70px;
+   transition: 0.5s;
+}
+
+body.showcart .container{
+    transform: translateX(-250px);
 }
 .cartTab h1{
     padding: 20px;
@@ -139,14 +145,11 @@ nav ul li a:hover::after{
     border-radius: 50%;
     cursor: pointer;
 }
-.listCart .quantity span:nth-child(2){
-    background-color: transparent;
-    color: #eee;
-}
+
     </style>
 
 </head>
-<body>
+<body class="">
     <div id="header">
         <div class="container">
             <nav>
@@ -194,5 +197,8 @@ nav ul li a:hover::after{
             <button class="checkOut">CHECK OUT</button>
         </div>
     </div>
+    <script>
+    
+    </script>
 </body>
 </html>
