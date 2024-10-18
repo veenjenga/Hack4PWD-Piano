@@ -1,17 +1,63 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Poppins',sans-serif;
+    font-family: "poppins";
     box-sizing: border-box;
 }
-html{
-    scroll-behavior: smooth;
+:root{
+    --main-color: #EFF609;
 }
-body{
-    background: black;
+span{
+    font-weight: 700;
+    color: var(--main-color);
+}
+h1{
+    color: #fff !important;
+}
+p{
+    color: #fff !important;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 100px;
+}
+nav{
+    flex: 1;
+    text-align: right;
+}
+.nav ul{
+    display: inline-block;
+    list-style: none;
+    cursor: pointer;
+}
+nav ul li{
+    display: inline-block;
+    margin-right: 22px;
+}
+a{
+    text-decoration: none;
     color: #fff;
+    transition: 0.3s;
 }
-/*header*/
+nav ul li a:hover{
+    text-decoration: underline;
+    letter-spacing: 1px;
+    color: var(--main-color);
+}
+.logo{
+    font-size: 2.5vh;
+    width: 140px;
+}
+.container{
+    max-width: 2800px;
+    padding: 0 7%;
+    margin: auto;
+}
 #header{
     width: 100%;
     height: 100vh;
@@ -22,6 +68,38 @@ body{
     box-shadow: 0px 4px 4px 0px #00000040;
 
 }
+.header-text{
+    margin-top: 5%;
+    font-size: 20px;
+}
+.header-text h1,h5{
+    font-size: 40px;
+    margin-top: 20px;
+    color:  #EFF609;
+}
+.header-text p{
+    color: #fff;
+}
+/*
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: black;
+    color: #fff;
+}
+
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/p1.png);
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    box-shadow: 0px 4px 4px 0px #00000040;
+
+}
+
 .container{
     padding: 10px 10%;
 }
@@ -71,35 +149,9 @@ nav ul li a:hover::after{
 .header-text p{
     color: black;
 }
-/*about*/
-#ABOUT{
-    padding: 80px 0;
-    color: #ababab;
-}
-.row{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-.ABOUT-col-1{
-    flex-basis: 35%;
-}
-.ABOUT-col-1 img{
-    border-radius: 15px;
-    justify-content: center;
-}
-ABOUT-col-2{
-    flex-basis: 60%;
-}
-.subtitle{
-    font-size: 60px;
-    font-weight: 600;
-    color: #fff;
-}
-.ABOUT-col-2 p{
-    word-spacing: 10px;
-}
-/*PRODUCTS*/
+
+
+
 .tab-titles{
     display: flex;
     margin: 20px 0 40px;
@@ -138,7 +190,7 @@ ABOUT-col-2{
 .tab-contents.active-tab{
     display: block;
 }
-/*contact*/
+
 .contact-left{
     flex-basis: 35%;
 }
@@ -164,7 +216,7 @@ form input,form textarea{
     border-radius: 6px;
 }
 
-/*footer*/
+
 .cont{
     max-width: 1170px;
     margin: auto;
@@ -203,3 +255,4 @@ ul{
     color: #ff004f;
     transform: translateY(-5px);
 }
+*/
