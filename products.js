@@ -8,14 +8,14 @@ const products = [
 },
 {
     "id": "2",
-    "name": "art",
+    "name": "beading",
     "price": 200,
     "description": "dettgbrgd",
     "image": "images/p4.png"
 },
 {
     "id": "3",
-    "name": "art",
+    "name": "woodwork",
     "price": 200,
     "description": "dettgbrgd",
     "image": "images/p5.png"
