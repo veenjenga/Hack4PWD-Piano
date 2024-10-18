@@ -21,76 +21,79 @@
                 <li><a href="#PRODUCTS">EXPLORE</a></li>
                 <li><a href="index.html">SHOPPING</a></li>
                 <li><a href="#">LOGIN</a></li>
-                <li><a href="#CONTACT">CONTACT US</a></li>
+                <li><a href="#CONTACT">CONTACT</a></li>
                     </ul>
                 </nav>
             </div>
             <div class="header-text">
             
-                <h1>HANDS AND HOPE</h1>
+                <h1>HANDS & HOPE</h1>
                 <h5>Disability is not inability</h5>
                 <p>do your everyday shopping</p>
             </div>
         </div>
     </section>
-    <!--
-   <div id="header">
-    <div class="container">
-        <nav>
-            <h2 class="logo">Hands & Hope</h2>
-            <ul>
-                <li><a href="#header">HOME</a></li>
-                <li><a href="about.html">ABOUT</a></li>
-                <li><a href="#PRODUCTS">EXPLORE</a></li>
-                <li><a href="index.html">SHOPPING</a></li>
-                <li><a href="#">LOGIN</a></li>
-                <li><a href="#CONTACT">CONTACT US</a></li>
-            </ul>
-        </nav>
-        <div class="header-text">
-            
-            <h1>HANDS AND HOPE</h1>
-            <h5>Disability is not inability</h5>
-            <p>do your everyday shopping</p>
-        </div>
-    </div>
 
-   </div>
-
+       <br>
    <div id="PRODUCTS">
     <div class="container">
         
         <h1 class="subtitle">EXPLORE</h1>
         <div class="tab-titles">
-            <p class="tab-link active-link"onclick="opentab('Art')">Art</p>
+            <p class="tab-link active-link"onclick="opentab('All')">All</p>
+            <p class="tab-link"onclick="opentab('Art')">Art</p>
             <p class="tab-link"onclick="opentab('Beadwork')">Beadwork</p>
             <p class="tab-link"onclick="opentab('Woodcraft')">Woodcraft</p>
         </div>
-        <div class="tab-contents active-tab" id="Art">
+        <div class="tab-contents active-tab" id="All">
             <ul>
-                <img src="images/p3.png" >
+                <div class="photo-container">
+                    <img src="images/p3.png">
+                    <img src="images/p4.png">
+                    <img src="images/p5.png">
+                    
+                  </div>
+            </ul>
+        </div>
+        <div class="tab-contents " id="Art">
+            <ul>
+                <div class="photo-container">
+                    
+                    <img src="images/p3.png">
+                    
+                    
+                  </div>
             </ul>
         </div>
         <div class="tab-contents" id="Beadwork">
             <ul>
-                <img src="images/p4.png" alt="">
+                <div class="photo-container">
+                    
+                    <img src="images/p4.png">
+                    
+                  </div>
             </ul>
         </div>
         <div class="tab-contents" id="Woodcraft">
             <ul>
-                <img src="images/p5.png" alt="">
+                <div class="photo-container">
+                    
+                    <img src="images/p5.png">
+                    
+                  </div>
             </ul>
         </div>
         
         </div>
     </div>
    </div>
-
+<br>
    <div id="CONTACT">
+    <h1 class="subtitle"><span>Contact</span> Us</h1>
     <div class="container">
         <div class="row">
             <div class="contact-left">
-                <h5 class="subtitle">Get more benefits<br> by Sign Up & Join <br>Hands and Hope <br>
+                <h5 class="subtitle">Get more benefits<br> by Sign Up & Join <br>Hands & Hope <br>
                 Community!</h5>
                 <p>FREE Special Gift to a new member</p>
                 <p>Get 2x JIWOO Points to purchase items</p>
@@ -102,7 +105,14 @@
             <div class="contact-right">
                 
                 <form action="">
-                    <label for="email">Email:</label>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Enter your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                  </form>
+                  <br>
+                  <h5>Sign Up</h5>
+                  <label for="email">Email:</label>
                     <input type="email" id="email" name="email"><br><br>
                     <label for="pwd">Password:</label>
                     <input type="password" id="pwd" name="pwd" 
@@ -110,7 +120,6 @@
                     <input type="checkbox" id="chbox" name="chbox" value="Box">
                     <label for="chbox"> I agree to all the <strong>Terms </strong>and <strong>Privacy Policy</strong></label><br>
                     <input type="submit">
-                  </form>
             </div>
         </div>
     </div>
@@ -121,22 +130,25 @@
     <div class="cont">
         <div class="ROW">
             <div class="footer-col">
-                <h4>Hands and Hope</h4>
+                <div class="logo">
+                    <h1>Hands & <span>Hope</span></h1>
+                </div>
                 
             </div>
             <div class="footer-col">
                 <h4>Quick Links</h4>
                 <ul>
-                    <li><a href="">HOME</a></li>
-                    <li><a href="">ABOUT</a></li>
+                    <li><a href="#header">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
                     <li><a href="">EXPLORE</a></li>
-                    <li><a href="">SHOPPING</a></li>
+                    <li><a href="index.html">SHOPPING</a></li>
                     <li><a href="">CONTACT US</a></li>
                 </ul>
             </div>
             <div class="footer-col">
                 <h4>Extra Links</h4>
                 <ul>
+                    <li><a href="">Login</a></li>
                     <li><a href="">My account</a></li>
                     <li><a href="">Payment</a></li>
                     <li><a href="">Contact Us</a></li>
@@ -168,6 +180,6 @@
         document.getElementById(tabname).classList.add("active-tab");
     }
    </script>
--->
+
 </body>
 </html>
