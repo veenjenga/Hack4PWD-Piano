@@ -3,6 +3,9 @@
 ## Project Overview
 
 People with disabilities often face challenges finding products and commodities that cater specifically to their needs. Our **Disability Commodity Finder** aims to solve this problem by providing a platform where users can easily search for and purchase items tailored to various disabilities. The website (and later, the app) helps bridge the gap in the market, making these products more accessible.
+To  get more insights on this consider watching
+ 
+ https://youtu.be/uMqOFxL4REQ?si=dOw96NkI8y-4FiR-
 
 ## Problem Statement
 
