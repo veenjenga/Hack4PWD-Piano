@@ -33,6 +33,5 @@ For more detailed information on how this platform works, please refer to the [f
 - **Contributor 3**: Research and testing for accessibility features.
 - **Contributor 4**: Project documentation and marketing.
 
-We welcome contributions from the community! If you'd like to contribute, feel free to contact us for more information.
 
 
