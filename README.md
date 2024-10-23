@@ -1,50 +1,38 @@
-# Disability Commodity Finder
----
-# Project Overview
+# Inclusive Artisan Marketplace
 
-People with disabilities often face challenges finding products and commodities that cater specifically to their needs. Our **Disability Commodity Finder** aims to solve this problem by providing a platform where users can easily search for and purchase items tailored to various disabilities. The website (and later, the app) helps bridge the gap in the market, making these products more accessible.
+A web application designed to empower artisans with intellectual impairments by providing a platform to showcase their unique creations and connect with potential buyers in a global marketplace.
 
----
-# Problem Statement
-The accessibility of specialized products for people with disabilities is often limited in traditional stores and e-commerce platforms. This project addresses the challenge of finding these items in one convenient place. Our platform is built to streamline the process of finding and acquiring necessary commodities for individuals with disabilities.
+## Table of Contents
 
----
-# Solution
----
-Our platform allows users to:
+- [Overview](#overview)
+- [Features](#features)
+- [Documentation](#documentation)
+- [Contributors](#contributors)
 
-Search and filter for products specifically designed for various disabilities.
-View detailed descriptions and reviews of products.
-Purchase items directly from the platform or through linked stores.
-By providing a dedicated platform, we aim to make the shopping experience more inclusive and accessible.
+## Overview
 
-# Tech Stack
----
-* **Frontend: JavaScript (React)**
-* **Backend: Node.js (Express)**
-* **Database: MongoDB**
-# API: Integration with third-party e-commerce APIs for product listings and purchases
-Authentication: Secure user login system to track user preferences and purchase history
+Individuals with intellectual impairments often excel in practical skills like beadwork, carpentry, farming, and textile crafting (e.g., making mats). However, they face challenges in managing their creations for financial gain due to literacy and numeracy barriers. Additionally, the absence of inclusive marketplaces further limits their economic independence and opportunities to thrive.
 
-**Key Features**
+This project seeks to solve these issues by developing a user-friendly platform where artisans can showcase their work and manage sales, with the assistance of trusted loved ones if needed.
 
----
-1. Search Functionality: Users can search for products based on specific disability needs.
-2. Real-Time Product Data: The website fetches live product information using e-commerce APIs.
-3. User Authentication: Users can create accounts to save product preferences and history.
-4. Accessible Design: The interface is designed to be inclusive, with features like screen reader compatibility and keyboard navigation.
-**How It Was Built**
---
-**Planning & Design:** The project started with brainstorming sessions and research into the challenges faced by people with disabilities in finding the right products. We then created wireframes and mockups for the user interface.
-1. **Frontend Development:** The frontend was built using React for a fast, responsive user interface.
-2. **Backend Development:** The backend, powered by Node.js and Express, handles authentication, product data management, and integrates with third-party APIs.
-3. **Database:** MongoDB was used to store user data, product information, and purchase history securely.
-4. **Testing:** The platform was tested with potential users to ensure accessibility and ease of use.
-# Challenges Faced
----
-* Ensuring the platform is fully accessible for users with disabilities.
-* Integrating with multiple e-commerce APIs to fetch relevant product information.
-* Providing real-time data updates for product availability and pricing.
-# Future Plans
----
-We plan to extend the platform to a mobile application, making it even more accessible for users on the go. Future updates will also include personalized recommendations based on user behavior.
+## Features
+
+- **Artisan Profile Management**: Artisans or their loved ones can create and manage profiles to display their work.
+- **Product Showcase**: A dedicated space for artisans to post their creations such as beadwork, carpentry, and mat-making items.
+- **Marketplace Connectivity**: An integrated global marketplace where potential buyers can discover and purchase products.
+- **Inclusive User Interface**: A simplified, intuitive design catered to users with intellectual impairments.
+
+## Documentation
+
+For more detailed information on how this platform works, please refer to the [full project documentation here](https://docs.google.com/presentation/d/1_1SW45CloPuVDw5J7ULxWvA-HF7vMQy24pfoZairvkQ/edit?usp=sharing).
+
+## Contributors
+
+- **Contributor 1**: Backend development, database integration.
+- **Contributor 2**: Frontend development, user interface design.
+- **Contributor 3**: Research and testing for accessibility features.
+- **Contributor 4**: Project documentation and marketing.
+
+We welcome contributions from the community! If you'd like to contribute, feel free to contact us for more information.
+
+
