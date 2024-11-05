@@ -1,0 +1,250 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "poppins";
+    box-sizing: border-box;
+}
+:root{
+    --main-color: #EFF609;
+}
+span{
+    font-weight: 700;
+    color: var(--main-color);
+}
+h1{
+    color: black !important;
+}
+p{
+    color: #fff ;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 100px;
+}
+nav{
+    flex: 1;
+    text-align: right;
+}
+.nav ul{
+    display: inline-block;
+    list-style: none;
+    cursor: pointer;
+}
+nav ul li{
+    display: inline-block;
+    margin-right: 22px;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+    transition: 0.3s;
+}
+nav ul li a:hover{
+    text-decoration: underline;
+    letter-spacing: 1px;
+    color: var(--main-color);
+}
+.logo{
+    font-size: 2.5vh;
+    
+    width: 140px;
+}
+.container{
+    max-width: 2800px;
+    padding: 0 7%;
+    margin: auto;
+}
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/p1.png);
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    box-shadow: 0px 4px 4px 0px #00000040;
+
+}
+.header-text{
+    margin-top: 5%;
+    font-size: 20px;
+}
+.header-text h1,h5{
+    font-size: 40px;
+    margin-top: 20px;
+    color:  #EFF609;
+}
+.header-text p{
+    color: #fff;
+}
+
+/*contact*/
+
+#CONTACT .container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+#CONTACT h3{
+    font-weight: 600;
+    font-size: 40px;
+}
+#CONTACT .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.contact-left, .contact-right {
+    flex: 1;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.contact-left {
+    max-width: 45%;
+}
+
+.contact-right {
+    max-width: 45%;
+}
+
+.contact-left .subtitle, .contact-left p {
+    color: #333;
+}
+
+.contact-right form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-right form .box {
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-right form .btn2 {
+    padding: 0.8rem;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+/*products*/
+#PRODUCTS .tab-link{
+    color: black;
+}
+.photo-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .photo-container img {
+    width: 30%;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease-in-out;
+    cursor: zoom-in; 
+    border-radius: 50px 50px 50px 50px;
+  }
+  
+  .photo-container img:hover {
+    transform: scale(1.2); 
+  }
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-link{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-link::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: #EFF609;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s; 
+}
+.tab-link.active-link::after{
+    width: 50%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span{
+    color: #b54789;
+    font-size: 14px;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+
+/*footer*/
+.cont{
+    max-width: 1170px;
+    margin: auto;
+}
+.ROW{
+    display: flex;
+    flex-wrap: wrap;
+}
+ul{
+    list-style: none;
+}
+.footer{
+    padding: 70px 0;
+}
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+}
+.footer-col h4{
+    font-size: 18px;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+}
+.footer-col ul li a{
+    color: black;
+}
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: black;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover{
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+
+
+
