@@ -8,15 +8,13 @@ const app = express();
 const port = process.env.PORT || 3001;
 const redirectUri = `http://localhost:${port}/login`;
 
-// Set EJS as the view engine
 app.set('view engine', 'ejs');
-app.set('views', __dirname + '/views'); // Set the views directory
+app.set('views', __dirname + '/views');
 
 console.log('Issuer Base URL:', process.env.ISSUER_BASE_URL);
 console.log('Client ID:', process.env.CLIENT_ID);
 console.log('Secret:', process.env.SECRET);
 
-// Auth0 configuration
 const config = {
     authRequired: false,
     auth0Logout: true,
@@ -26,7 +24,11 @@ const config = {
     secret: process.env.SECRET,
 };
 
-// Middleware
+const adminCredentials = {
+    "jasemwaura@gmail.com": true, // Example admin user
+    "anotheradmin@example.com": true,
+};
+
 app.use(express.json());
 app.use(session({
     secret: process.env.SESSION_SECRET || 'your-secret-key',
@@ -38,30 +40,25 @@ app.use(session({
     },
 }));
 
-// Initialize Auth0 middleware
 app.use(auth(config));
 app.use(express.static('public'));
 
-// Root route - renders the login page (index.ejs)
 app.get('/', (req, res) => {
     if (req.oidc.isAuthenticated()) {
         res.redirect('/home');
     } else {
-        res.render('login'); // Render login page (login.ejs) if not authenticated
+        res.render('login');
     }
 });
 
-// Home route - renders home.ejs after successful login
 app.get('/home', requiresAuth(), (req, res) => {
     res.render('home', { user: req.oidc.user });
 });
 
-// About route - no authentication required
 app.get('/about', (req, res) => {
-    res.render('about'); // Render about page (about.ejs)
+    res.render('about');
 });
 
-// Fetch user profile
 app.get('/profile', requiresAuth(), async (req, res) => {
     try {
         const userResponse = await axios.get(`${process.env.ISSUER_BASE_URL}/userinfo`, {
@@ -69,20 +66,24 @@ app.get('/profile', requiresAuth(), async (req, res) => {
                 Authorization: `Bearer ${req.oidc.accessToken}`,
             },
         });
-        res.render('profile', { user: userResponse.data }); // Render profile view
+        const user = userResponse.data;
+
+        if (adminCredentials[user.email]) {
+            res.redirect('/admin');
+        } else {
+            res.render('profile', { user });
+        }
     } catch (error) {
         console.error('Error fetching user profile:', error);
         res.status(500).send('Error fetching user profile');
     }
 });
 
-// Route to handle shopping login
 app.get('/login/shopping', (req, res) => {
     const redirectUri = `${process.env.ISSUER_BASE_URL}/authorize?response_type=code&client_id=${process.env.CLIENT_ID}&redirect_uri=http://localhost:3002/login/shopping/callback`;
     res.redirect(redirectUri);
 });
 
-// Route to handle the callback after Auth0 login for shopping
 app.get('/login/shopping/callback', async (req, res) => {
     const { code } = req.query;
 
@@ -108,7 +109,6 @@ app.get('/login/shopping/callback', async (req, res) => {
     }
 });
 
-// Shopping route - displays shopping.ejs
 app.get('/shopping', async (req, res) => {
     try {
         if (req.session && req.session.accessToken) {
@@ -133,13 +133,15 @@ app.get('/shopping', async (req, res) => {
     }
 });
 
-// Logout route - destroys the session and logs the user out
 app.get('/logout', (req, res) => {
     req.session.destroy();
     res.redirect(`${process.env.ISSUER_BASE_URL}/v2/logout?returnTo=http://localhost:${port}`);
 });
 
-// Start server
+app.get('/admin', requiresAuth(), (req, res) => {
+    res.render('admin', { user: req.oidc.user });
+});
+
 app.listen(port, () => {
     console.log(`Server is running at http://localhost:${port}`);
 });
